@@ -11,10 +11,12 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import {  MatIconModule } from '@angular/material/icon';
 import {  MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { LaunchComponent } from './launch/launch.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    LaunchComponent
   ],
   imports: [
     BrowserModule,
