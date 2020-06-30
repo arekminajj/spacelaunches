@@ -1,3 +1,24 @@
-<div *ngFor="let launch of launches.launches">
-    {{launch.name}}
+<div class="container">
+    <mat-accordion>
+        <div *ngFor="let launch of launches.launches">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    {{launch.name}}  <span class="badge badge-secondary">  New</span>
+                  </mat-panel-title>
+                  <mat-panel-description style="text-align: right;">
+                   
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p class="font-weight-bold">Id: </p>  <p class="font-italic">{{launch.id}}</p>
+                <p class="font-weight-bold">Window start: </p>  <p class="font-italic">{{launch.windowstart}}</p>
+                <p class="font-weight-bold">Window end: </p>  <p class="font-italic">{{launch.windowend}}</p>
+                <p><a href="#">Details</a></p>
+                
+              </mat-expansion-panel>
+        </div>
+      </mat-accordion>
 </div>
+
+
+  

@@ -11,6 +11,7 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import {  MatIconModule } from '@angular/material/icon';
 import {  MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { LaunchComponent } from './launch/launch.component';
 @NgModule({
   declarations: [
@@ -26,9 +27,10 @@ import { LaunchComponent } from './launch/launch.component';
     MatIconModule,
     HttpClientModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, LaunchComponent]
 })
 export class AppModule { }
