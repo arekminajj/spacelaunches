@@ -13,11 +13,13 @@ import {  MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { LaunchComponent } from './launch/launch.component';
+import { LaunchDetailsComponent } from './launch-details/launch-details.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    LaunchComponent
+    LaunchComponent,
+    LaunchDetailsComponent
   ],
   imports: [
     BrowserModule,

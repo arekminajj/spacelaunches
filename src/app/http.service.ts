@@ -15,6 +15,10 @@ export class HttpService {
     return this.http.get<LaunchRootObject>(this.base_url + 'launch');
   }
 
+  GetLaunchById(id:string){
+    return this.http.get<any>(this.base_url + 'launch/'+ id)
+  }
+
   constructor(private http: HttpClient) { }
 }
 

@@ -1,6 +1,6 @@
 <div class="container">
     <mat-accordion>
-        <div *ngFor="let launch of launches.launches">
+        <div  *ngFor="let launch of launches.launches">
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
@@ -13,7 +13,7 @@
                 <p class="font-weight-bold">Id: </p>  <p class="font-italic">{{launch.id}}</p>
                 <p class="font-weight-bold">Window start: </p>  <p class="font-italic">{{launch.windowstart}}</p>
                 <p class="font-weight-bold">Window end: </p>  <p class="font-italic">{{launch.windowend}}</p>
-                <p><a href="#">Details</a></p>
+                <p><a href="/launches/{{launch.id}}">Details</a></p>
                 
               </mat-expansion-panel>
         </div>

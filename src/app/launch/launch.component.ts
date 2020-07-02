@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LaunchRootObject } from '../http.service'
 import { HttpService } from '../http.service';
 import { Observable } from 'rxjs';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-launch',
@@ -11,16 +12,13 @@ import {MatExpansionModule} from '@angular/material/expansion';
 })
 export class LaunchComponent implements OnInit {
 
-  constructor(private client: HttpService) { }
+  constructor(private client: HttpService, private router:Router) { }
 
   launches:LaunchRootObject;
 
-
   ngOnInit(): void {
-    this.client.GetAllLauches().subscribe((data:LaunchRootObject) =>{
-      console.log(data); //this is working
+    this.client.GetAllLauches().subscribe((data:LaunchRootObject) =>{ 
       this.launches = data;
-      console.log(this.launches);
     });  
   
   }
