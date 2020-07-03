@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { LaunchComponent } from './launch/launch.component';
+import { LaunchDetailsRootObject } from './launch-details-rootobject'
 
 
 @Injectable({
@@ -16,7 +17,7 @@ export class HttpService {
   }
 
   GetLaunchById(id:string){
-    return this.http.get<any>(this.base_url + 'launch/'+ id)
+    return this.http.get<LaunchDetailsRootObject>(this.base_url + 'launch/'+ id)
   }
 
   constructor(private http: HttpClient) { }

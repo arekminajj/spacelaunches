@@ -1,1 +1,38 @@
-<p>launch-details works!</p>
+<div class="container">
+    
+    <div class="row">
+        <div class="col"><h1>Launch</h1>
+            <p class="font-weight-bold">Name: </p> <p class="font-italic">{{launchDetails.launches[0].name}}</p>
+            <p class="font-weight-bold">Window start: </p> <p class="font-italic">{{launchDetails.launches[0].windowstart}}</p>
+            <p class="font-weight-bold">Window end: </p> <p class="font-italic">{{launchDetails.launches[0].windowend}}</p>
+            <p class="font-weight-bold">Net: </p> <p class="font-italic">{{launchDetails.launches[0].net}}</p>
+            <p class="font-weight-bold">Status: </p> <p class="font-italic">{{launchDetails.launches[0].status}}</p>
+        </div>
+        <div class="col"><h1>Location</h1>
+            <p class="font-weight-bold">Pad id: </p> <p class="font-italic">{{launchDetails.launches[0].location.pads[0].id}}</p>
+            <p class="font-weight-bold">Pad name: </p> <p class="font-italic">{{launchDetails.launches[0].location.pads[0].name}}</p>
+            <p class="font-weight-bold">Location Name: </p> <p class="font-italic">{{launchDetails.launches[0].location.name}}</p>
+            <p class="font-weight-bold">Location Country: </p> <p class="font-italic">{{launchDetails.launches[0].location.countryCode}}</p>
+            <a target="_blank" href="{{launchDetails.launches[0].location.pads[0].wikiURL}}">Pad Wikipedia page</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="col"><h1>Rocket</h1>
+            <p class="font-weight-bold">Rocket id: </p> <p class="font-italic">{{launchDetails.launches[0].rocket.id}}</p>
+            <p class="font-weight-bold">Rocket name: </p> <p class="font-italic">{{launchDetails.launches[0].rocket.name}}</p>
+            <p class="font-weight-bold">Rocket family name: </p> <p class="font-italic">{{launchDetails.launches[0].rocket.familyname}}</p>
+            <p class="font-weight-bold">Rocket agency name: </p> <p class="font-italic">{{launchDetails.launches[0].rocket.agencies[0].name}}</p>
+            <p class="font-weight-bold">Rocket agency country: </p> <p class="font-italic">{{launchDetails.launches[0].rocket.agencies[0].countryCode}}</p>
+           <a target="_blank" href="{{launchDetails.launches[0].rocket.agencies[0].wikiURL}}">Agency Wikipedia page</a>
+        </div>
+        <div class="col"><h1>Mission</h1>
+            <p class="font-weight-bold">Mission Id: </p> <p class="font-italic">{{launchDetails.launches[0].missions[0].id}}</p>
+            <p class="font-weight-bold">Mission name: </p> <p class="font-italic">{{launchDetails.launches[0].missions[0].name}}</p>
+            <p class="font-weight-bold">Mission description: </p> <p class="font-italic">{{launchDetails.launches[0].missions[0].description}}</p>
+            <p class="font-weight-bold">Mission type: </p> <p class="font-italic">{{launchDetails.launches[0].missions[0].typeName}}</p></div>
+      </div>
+      <div class="col">
+          
+      </div>
+
+    
+</div>
