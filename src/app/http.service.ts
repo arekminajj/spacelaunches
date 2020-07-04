@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { LaunchComponent } from './launch/launch.component';
-import { LaunchDetailsRootObject } from './launch-details-rootobject'
+import { LaunchDetailsRootObject } from './launch-details-rootobject';
+import { AgenciesRootObject } from './agencies-rootobject';
 
 
 @Injectable({
@@ -12,12 +13,16 @@ import { LaunchDetailsRootObject } from './launch-details-rootobject'
 export class HttpService {
   base_url = "https://launchlibrary.net/1.4/";
 
-  GetAllLauches(){
+  GetAllLauches() {
     return this.http.get<LaunchRootObject>(this.base_url + 'launch');
   }
 
-  GetLaunchById(id:string){
+  GetLaunchById(id:string) {
     return this.http.get<LaunchDetailsRootObject>(this.base_url + 'launch/'+ id)
+  }
+
+  GetAllAgencies() {
+    return this.http.get<AgenciesRootObject>(this.base_url + 'agency');
   }
 
   constructor(private http: HttpClient) { }

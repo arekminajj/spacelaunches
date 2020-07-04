@@ -1,0 +1,30 @@
+<div class="container">
+    <div *ngFor="let agency of agencies.agencies">  
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                {{agency.name}}
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <p class="font-weight-bold">Id: </p> <p class="font-italic">{{agency.id}}</p>
+                <p class="font-weight-bold">Country: </p> <p class="font-italic">{{agency.countryCode}}</p>
+                <a href="{{agency.infoURL}}">Agency Info</a>
+                <br>
+                <br>
+                <a href="{{agency.wikiURL}}">Agency Wikipedia page</a>
+                <br><br>
+                <div *ngFor="let url of agency.infoURLs">
+                    <a href="{{url}}">{{url}}</a>
+                    <br><br>
+                </div>
+            </div>
+          </div>
+        </div> 
+    </div>
+    </div>
+</div>
