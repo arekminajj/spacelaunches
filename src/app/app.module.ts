@@ -15,13 +15,15 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { LaunchComponent } from './launch/launch.component';
 import { LaunchDetailsComponent } from './launch-details/launch-details.component';
 import { AgenciesComponent } from './agencies/agencies.component';
+import { MissionComponent } from './mission/mission.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LaunchComponent,
     LaunchDetailsComponent,
-    AgenciesComponent
+    AgenciesComponent,
+    MissionComponent
   ],
   imports: [
     BrowserModule,

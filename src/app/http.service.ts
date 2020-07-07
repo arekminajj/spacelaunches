@@ -5,6 +5,8 @@ import { catchError, retry } from 'rxjs/operators';
 import { LaunchComponent } from './launch/launch.component';
 import { LaunchDetailsRootObject } from './launch-details-rootobject';
 import { AgenciesRootObject } from './agencies-rootobject';
+import { MissionRootObject } from './mission-rootobject';
+import { MissionDetailsRootObject } from './mission-details-rootobject';
 
 
 @Injectable({
@@ -23,6 +25,14 @@ export class HttpService {
 
   GetAllAgencies() {
     return this.http.get<AgenciesRootObject>(this.base_url + 'agency');
+  }
+
+  GetAllMissions() {
+    return this.http.get<MissionRootObject>(this.base_url + 'mission');
+  }
+
+  GetMissionById(id:string) {
+    this.http.get<MissionDetailsRootObject>(this.base_url + 'mission/' + id)
   }
 
   constructor(private http: HttpClient) { }
