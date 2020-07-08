@@ -16,7 +16,6 @@ export class MissionComponent implements OnInit {
   ngOnInit(): void {
     this.http.GetAllMissions().subscribe((data:MissionRootObject) => {
       this.missions = data
-      console.log(data)
     })
   }
 

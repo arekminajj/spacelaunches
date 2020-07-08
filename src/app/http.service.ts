@@ -32,7 +32,7 @@ export class HttpService {
   }
 
   GetMissionById(id:string) {
-    this.http.get<MissionDetailsRootObject>(this.base_url + 'mission/' + id)
+    return this.http.get<MissionDetailsRootObject>(this.base_url + 'mission/' + id)
   }
 
   constructor(private http: HttpClient) { }
