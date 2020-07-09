@@ -1,4 +1,40 @@
 <div class="container">
-
+    <div *ngFor="let mission of missionDetails.missions">
+        <div style="height: 1rem;"></div>
+        <h1 class="text-center">{{mission.name}}</h1>
+        <div style="height: 1rem;"></div>
+        <div class="row">
+            <div class="col">
+                <h3 class="font-weight-bold">Mission Description:</h3>
+                <h3>{{mission.description}}</h3>
+                <h3 class="font-weight-bold">Mission Type:</h3>
+                <h3>{{mission.typeName}}</h3>
+                <h3 class="font-weight-bold">Mission launch name:</h3>
+                <h3>{{mission.launch.name}}</h3>
+                <h4><a target="_blank" href="{{mission.infoURL}}">Info page</a></h4>
+                <h4><a target="_blank" href="{{mission.wikiURL}}">Wikipedia page</a></h4>
+            </div>
+            <div class="col">
+                <div *ngFor="let agency of mission.agencies">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h2 class="card-title">Agency:</h2>
+                            <p class="font-weight-bold">Name:</p>
+                            <p class="card-text">{{agency.name}}</p>
+                            <p class="font-weight-bold">Abbreviation:</p>
+                            <p class="card-text">{{agency.abbrev}}</p>
+                            <p class="font-weight-bold">Country:</p>
+                            <p class="card-text">{{agency.countryCode}}</p>
+                            <a target="_blank" href="{{agency.wikiURL}}">Wikipedia page</a>
+                            <br><br>
+                            <div *ngFor="let url of agency.infoURLs">
+                                <a href="{{url}}">{{url}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 1rem;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<!-----TODO: ADD SOME COOL LAYOUT-->
