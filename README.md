@@ -4,10 +4,10 @@ Web client for [Launch Library API](https://launchlibrary.net/docs/1.4/api.html)
 
 ## Screenshots
 
-![screenshot_1](screenshots/4.jpg)
-![screenshot_2](screenshots/3.jpg)
-![screenshot_3](screenshots/2.jpg)
-![screenshot_4](screenshots/1.jpg)
+![screenshot_1](screenshots/4.png)
+![screenshot_2](screenshots/3.png)
+![screenshot_3](screenshots/2.png)
+![screenshot_4](screenshots/1.png)
 
 
 ## Build
