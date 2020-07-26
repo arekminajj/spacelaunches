@@ -1,1 +1,23 @@
-<p>rocket works!</p>
+<div class="container">
+    <mat-accordion>
+        <div  *ngFor="let rocket of rockets.rockets">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    {{rocket.name}}  
+                  </mat-panel-title>
+                  <mat-panel-description style="text-align: right;">
+                   
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+              <a href="rockets/{{rocket.id}}">Detials</a> <hr>
+              <img class="img-fluid" style="max-height: 400px;" src="{{rocket.imageURL}}" />
+              </mat-expansion-panel>
+        </div>
+        
+      </mat-accordion>
+      
+</div>
+
+
+  
