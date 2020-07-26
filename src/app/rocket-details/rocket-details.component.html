@@ -1,1 +1,30 @@
-<p>rocket-details works!</p>
+<div style="height: 40px;"></div>
+<div class="container">
+    <div class="row">
+    <div class="col">
+    <div class="card" style="max-width: 350px;">
+    <div class="card-body" >
+    <div *ngFor="let rocket of rocketDetails.rockets">
+        <h3 class="font-weight-bold">Name</h3>
+        <h3>{{rocket.name}}</h3>
+        <h3 class="font-weight-bold">Id</h3>
+        <h3>{{rocket.id}}</h3>
+        <h3 class="font-weight-bold">Default Pads</h3>
+        <h3>{{rocket.defaultPads}}</h3>
+        <a target="_blank" href="{{rocket.wikiURL}}"> Rocket's wikipedia page</a>
+        <div *ngFor="let url of rocket.infoURLs">
+            <div style="height: 8px;"></div>
+            <a target="_blank" href="{{url}}">{{url}}</a>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col">
+        <div *ngFor="let rocket of rocketDetails.rockets">
+            <img class="img-fluid" src="{{rocket.imageURL}}" >
+        </div>
+        
+    </div>
+    </div>
+</div>
