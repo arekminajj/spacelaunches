@@ -7,7 +7,8 @@ import { LaunchDetailsRootObject } from './launch-details-rootobject';
 import { AgenciesRootObject } from './agencies-rootobject';
 import { MissionRootObject } from './mission-rootobject';
 import { MissionDetailsRootObject } from './mission-details-rootobject';
-
+import { RocketRootObject } from './rocket-rootobject';
+import { RocketDetailsRootObject } from './RocketDetails-rootobject';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,14 @@ export class HttpService {
 
   GetMissionById(id:string) {
     return this.http.get<MissionDetailsRootObject>(this.base_url + 'mission/' + id)
+  }
+
+  GetAllRockets() {
+    return this.http.get<RocketRootObject>(this.base_url + '/rocket')
+  }
+
+  GetRocketById(id:string) {
+    return this.http.get<RocketDetailsRootObject>(this.base_url + '/rocket/' + id)
   }
 
   constructor(private http: HttpClient) { }
