@@ -8,6 +8,7 @@ import { MissionDetailsComponent } from './mission-details/mission-details.compo
 
 
 const routes: Routes = [
+  {path:'', component: LaunchComponent},
   {path:'launches', component: LaunchComponent},
   {path:'launches/:id', component: LaunchDetailsComponent},
   {path:'agencies', component: AgenciesComponent},

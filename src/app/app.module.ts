@@ -17,6 +17,7 @@ import { LaunchDetailsComponent } from './launch-details/launch-details.componen
 import { AgenciesComponent } from './agencies/agencies.component';
 import { MissionComponent } from './mission/mission.component';
 import { MissionDetailsComponent } from './mission-details/mission-details.component';
+import { RocketComponent } from './rocket/rocket.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { MissionDetailsComponent } from './mission-details/mission-details.compo
     LaunchDetailsComponent,
     AgenciesComponent,
     MissionComponent,
-    MissionDetailsComponent
+    MissionDetailsComponent,
+    RocketComponent
   ],
   imports: [
     BrowserModule,
