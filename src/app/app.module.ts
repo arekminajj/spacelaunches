@@ -18,6 +18,7 @@ import { AgenciesComponent } from './agencies/agencies.component';
 import { MissionComponent } from './mission/mission.component';
 import { MissionDetailsComponent } from './mission-details/mission-details.component';
 import { RocketComponent } from './rocket/rocket.component';
+import { RocketDetailsComponent } from './rocket-details/rocket-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { RocketComponent } from './rocket/rocket.component';
     AgenciesComponent,
     MissionComponent,
     MissionDetailsComponent,
-    RocketComponent
+    RocketComponent,
+    RocketDetailsComponent
   ],
   imports: [
     BrowserModule,
